@@ -9,7 +9,7 @@ let split_into_words text =
   let lowercase_text = String.lowercase_ascii text in 
   let word_list = Str.split (Str.regexp "[ \t\n.,;:!?]+") lowercase_text in
   List.filter (fun word -> word <> "") word_list  (* Remove empty strings *)
-;;
+;;                                   
                                      
 (* Function to count word frequencies *)              
 let count_word_frequencies filename =                 

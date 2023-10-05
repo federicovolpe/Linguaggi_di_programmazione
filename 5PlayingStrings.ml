@@ -1,14 +1,12 @@
-(** -------------------------- is_palindrome --------------------------*)                                                                               
+(** -------------------------- is_palindrome --------------------------*)
+(*funzione per il reversing di una stringa*)                                                                              
 let rec reverse (str:string): string =                                                                                                 
   match str with                                                                                                                       
   | "" -> ""                                                                                                                           
   | s -> (String.sub s (String.length s - 1) 1) (*prende l'ultimo carattere*)                                                          
-      ^ reverse (String.sub s 0 (String.length s - 1)) (*funzione sulla sottostringa restante*)                                                                               
+        (*concatenazione di stringhe*) ^ reverse (String.sub s 0 (String.length s - 1)) (*funzione sulla sottostringa restante*)                                                                               
 ;;                                                                                                                                                                                                                                                                          
-                                                                                                                                       
-let lowerstring (s:string): string =                                                                                                   
-  String.lowercase_ascii s                                                                                                             
-;;                                                                                                                                     
+                                                                                                                                      
                                                                                                                                        
 let removespecialchar (s:string): string =                                                                                             
   (*concatenazione della stringa spezzata in corrispondenza del carattere...*)                                                                                           
@@ -21,10 +19,10 @@ let removespecialchar (s:string): string =
                                                                                                                                        
 let is_palindrome (s : string) : bool =                                                                                                
   (* stringa originale lowered e senza caratteri speciali *)                                                                                                                 
-  let og = lowerstring (removespecialchar s) in                                                                                        
-  (* stringa precedente al contrario *)                                                                          
-  let rev = reverse og in                                                                                        
-                                                                                                                 
+  let og = String.lowercase_ascii (removespecialchar s) in                                                                                        
+  (* stringa precedente al contrario *)                                                                                
+  let rev = reverse og in                                                                                              
+                                                                                                                       
   print_string rev ;                                                                                             
   print_string og ;                                                                                              
   String.equal rev og                                                                                       

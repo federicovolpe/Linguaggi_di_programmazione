@@ -39,13 +39,13 @@ in print_string "[" ; print_list lst ; print_string "]\n" ;;
                                             
 let print_pair a =                          
   Printf.printf "(%s, %d)" (fst a) (snd a) ;;
-                               
-let main() =                   
-  let m = (heaviest alkaline_earth_metals) and
+                                                   
+let main() =                                       
+  let m = (heaviest alkaline_earth_metals) and     
       sorted_aem = sort_ascending alkaline_earth_metals in
     Printf.printf "The heaviest element is «%s» with «%2d» as atomic number.\n" (fst m) (snd m) ;
-    print_list print_pair sorted_aem ;
+    print_list print_pair sorted_aem ;             
     print_list print_pair (merge_elements alkaline_earth_metals noble_gases) ;;
-         
-main() ;;                              
+                                                   
+main() ;;                                          
                                                    

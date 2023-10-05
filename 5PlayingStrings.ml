@@ -23,7 +23,6 @@ let is_palindrome (s : string) : bool =
   (* stringa precedente al contrario *)                                                                                
   let rev = reverse og in                                                                                              
                                                                                                                        
-<<<<<<< HEAD
   print_string rev ;                                                                                                   
   print_string og ;                                                                                                    
   String.equal rev og                                                                                                  
@@ -34,22 +33,8 @@ let is_palindrome (s : string) : bool =
 (**caso in cui si volesse sottrarre una sola volta i caratteri della seconda stringa*)                                 
 let rec subStringUnary (l1: char list) (l2: char list): char list =                                                    
     let rec subchar (l1: char list) (c: char): char list =                                                             
-      match l1 with                                                                                              
-      | h :: tail when h = c -> tail                                                                             
-=======
-  print_string rev ;                                                                                             
-  print_string og ;                                                                                              
-  String.equal rev og                                                                                       
-;;                                                                                  
-                                                                                    
-(** -------------------------- (-) --------------------------*)                     
-                                                                                    
-(**caso in cui si volesse sottrarre una sola volta i caratteri della seconda stringa*)
-let rec subStringUnary (l1: char list) (l2: char list): char list =                      
-    let rec subchar (l1: char list) (c: char): char list =                                        
       match l1 with                                                                 
-      | h :: tail when h = c -> tail                                                
->>>>>>> develop
+      | h :: tail when h = c -> tail    
       | h :: tail -> h :: subchar tail c                                                             
       | [] -> []                                                                                                   
     in                                                                                                             
@@ -108,9 +93,5 @@ let rec anagram (s: string) (l: string list) : bool =
   | [] -> false                                                                                                                                                                                   
 ;;                                                                                                                                                                                                
                                                                                                                                                                                                   
-(*testing... *)                                                                                                                                                                                                 
-<<<<<<< HEAD
+(*testing... *)                                                                                                                                                                        
 anagram "nace" ["ociredef";"cane";"pippo";"pasta";"pluto";"paperino";"qui";"quo";"qua"];;                                                                                           
-=======
-anagram "nace" ["ociredef";"cane";"pippo";"pasta";"pluto";"paperino";"qui";"quo";"qua"];;                                                                                                     
->>>>>>> develop

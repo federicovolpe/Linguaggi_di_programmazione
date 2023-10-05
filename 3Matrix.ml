@@ -6,6 +6,7 @@ let rec zeroes n m =
   List.init m (fun x -> 0))                                                                    
 ;;                                                                                             
                                                                                                
+<<<<<<< HEAD
   (** costruisce una matrice identita' di dimensione n*)                                                               
 let identity size =                                                                                                                 
   List.init size (fun x -> List.init size (fun y -> if y == x then 1 else 0))                                          
@@ -15,6 +16,17 @@ let identity size =
 let init n =                                                                                                           
   List.init n (fun x -> List.init n (fun y -> x*y));;                                                                  
                                                                                                                        
+=======
+  (** costruisce una matrice identita' di dimensione n*)                                       
+let identity size =                                                                                                                 
+  List.init size (fun x -> List.init size (fun y -> if y == x then 1 else 0))                  
+;;                                                                                             
+                                                                                               
+  (** costruisce una matrice "filled with the first n×n integers" *)                                              
+let init n =                                                                                   
+  List.init n (fun x -> List.init n (fun y -> x*y));;                                                                 
+                                                                                       
+>>>>>>> develop
   (** costruisce la matrice trasposta di quella passata per argomento *)                                                                   
 let rec transpose =                                                                                                                        
   function                                                                                                                                 

@@ -1,14 +1,15 @@
 (**esercizio agggiunto pari pari a come lo ha svolto il professore
     con la sola aggiunta di commenti per la spiegazione *)
-                                            
+                                                          
 let alkaline_earth_metals = ("beryllium", 4)::("magnesium", 12)::("calcium", 20)::("strontium", 38)::("barium", 56)::("radium", 88)::[] ;;
                                                                        
 let noble_gases = [("helium", 2); ("neon", 10); ("argon", 18); ("krypton", 36); ("xenon", 54); ("radon", 86)] ;;
-                                            
-(** funzione per il sorting delle tuple *)
-let (>:) a b =       
-    (snd a) - (snd b)
-;;                                     
+                                                          
+(** funzione per il sorting delle tuple *)                
+let (>:) a b =                                            
+    (snd a) - (snd b)                                     
+;;                                                        
+                                                          
 let max a b =            
     if (a >: b >= 0)     
         then a           

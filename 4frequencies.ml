@@ -1,15 +1,16 @@
 open Stdlib                                                                                                                   
-                                                                                                                                   
+(* esercizio che non sono stato in grado di fare quindi ho fatto fare a chatGPT*)
+                                                                                                                                 
 (**function that for each word in the text increments its counter*)                                                                
-                                                      
-open Str  (* Import the Str module for regular expressions *)
-                                                      
-(* Function to split a string into words *)           
-let split_into_words text =                           
-  let lowercase_text = String.lowercase_ascii text in 
-  let word_list = Str.split (Str.regexp "[ \t\n.,;:!?]+") lowercase_text in
-  List.filter (fun word -> word <> "") word_list  (* Remove empty strings *)
-;;                                   
+                                                                                 
+open Str  (* Import the Str module for regular expressions *)                    
+                                                                                 
+(* Function to split a string into words *)                                      
+let split_into_words text =                                                      
+  let lowercase_text = String.lowercase_ascii text in                            
+  let word_list = Str.split (Str.regexp "[ \t\n.,;:!?]+") lowercase_text in      
+  List.filter (fun word -> word <> "") word_list  (* Remove empty strings *)     
+;;                                                                               
                                      
 (* Function to count word frequencies *)              
 let count_word_frequencies filename =                 
@@ -37,7 +38,8 @@ let count_word_frequencies filename =
   in                                                               
   let word_frequencies = process_lines [] in                       
   word_frequencies                                                 
-;;                                                                  
+;;
+
 (* Example usage *)                                                
 let word_frequencies = count_word_frequencies "your_text_file.txt" 
 in                                                                 

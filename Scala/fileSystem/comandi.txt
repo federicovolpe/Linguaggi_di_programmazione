@@ -1,0 +1,6 @@
+mkdir cartella1
+mkdir cartella2
+cd cartella1
+mkfile fileprova
+move fileprova cartella2
+print

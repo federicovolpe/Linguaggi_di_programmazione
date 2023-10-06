@@ -1,0 +1,6 @@
+mkdir prima_directory  
+mkdir seconda_directory
+cd prima_directory     
+touch primofile  
+touch secondofile       
+ls                     

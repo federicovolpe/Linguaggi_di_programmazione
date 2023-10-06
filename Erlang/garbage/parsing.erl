@@ -1,14 +1,14 @@
--module(parsing).
--export([parse/2,push/2,pop/1]).
-
+-module(parsing).         
+-export([parse/2, push/2, pop/1]).
+                          
 %implementazione di uno stack
-push(L,X) ->
-    lists:append(L,[X]).
-
-primo([H|_]) -> H.
-pop(L) ->
+push(L,X) ->              
+    lists:append(L,[X]).  
+                          
+primo([H|_]) -> H.        
+pop(L) ->                 
     {primo(lists:reverse(L)),lists:droplast(L)}.
-
+                          
 parseparentesis(Buffer) -> %ho trovato una parentesi chiusa
 %svuoto le ultime 3 posizioni del buffer
     Secondo = element(1,pop(Buffer)),

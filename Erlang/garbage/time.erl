@@ -1,15 +1,15 @@
 % Write the function time:swedish_date() which returns a 
-% string containing the date in swedish YYMMDD %
--module(time).
--export([main/0]).
-ricomponi(T,2) ->
-    T;
-ricomponi([H|T],Len) ->
-    if(Len > 2) -> ricomponi(T,Len-1);
-    true -> list_to_integer([H|T])
-end.
-
-aggiungi(X) ->
+% string containing the date in swedish YYMMDD %         
+-module(time).                                           
+-export([main/0]).                                       
+ricomponi(T,2) ->                                        
+    T;                                                   
+ricomponi([H|T],Len) ->                                  
+    if(Len > 2) -> ricomponi(T,Len-1);                   
+    true -> list_to_integer([H|T])                       
+end.                                                     
+                                                         
+aggiungi(X) ->                                          
     io:format("appesa : ~p~n",[lists:append([0],X)]),
     lists:append([0],X).
 

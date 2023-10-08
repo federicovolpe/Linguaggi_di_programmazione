@@ -1,7 +1,16 @@
 (**esercizio agggiunto pari pari a come lo ha svolto il professore
     con la sola aggiunta di commenti per la spiegazione *)
-    
-type t_unit = Celsius|Fahrenheit|Kelvin|Rankine|Delisle|Newton|Reaumur|Romer ;;
+                      
+type t_unit =    
+  |Celsius       
+  |Fahrenheit    
+  |Kelvin        
+  |Rankine       
+  |Delisle       
+  |Newton        
+  |Reaumur|Romer 
+;;
+
 type temperature = { value: float; tu: t_unit } ;;        
                                                           
 let cons = [Celsius; Fahrenheit; Kelvin; Rankine; Delisle; Newton; Reaumur; Romer] ;;

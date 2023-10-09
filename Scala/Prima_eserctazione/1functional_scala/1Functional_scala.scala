@@ -4,21 +4,23 @@ class Funzioni {
         println(nuova +" =? "+nuova.reverse)
         if (nuova == nuova.reverse)true else false
     }
+    
     def is_an_anagram (s : String, dizionario: List[String]): Boolean = {
         dizionario.foreach(x => 
             if(s.sorted.mkString == x.sorted.mkString) return true)
         return false
     }
+     
     def factors (x:Int, div:Int = 1, res: List[Int] = Nil) : List[Int] = {
         //ritorna una lista di numeri a partire da 1 dove sono solo divisori
         if (div == x) return res
         if((x % div) == 0)   factors(x, div+1, res :+ div) 
         else factors(x,div+1,res)
     }
-
+     
     val isperfect= (x:Int)  => { factors(x).sum == x }
-    
-}
+     
+}    
 
 object main{
     def main(args : Array[String]) : Unit = {

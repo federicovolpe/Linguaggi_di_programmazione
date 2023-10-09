@@ -1,0 +1,3 @@
+Consegna:                                                                                                                                  
+implementare un parser in grado di leggere e interpretare una espressione                                                                  
+implementare successivamente un evaluator in grado di prendere in input l'output del parser e che ne elabora il risultato della espressione

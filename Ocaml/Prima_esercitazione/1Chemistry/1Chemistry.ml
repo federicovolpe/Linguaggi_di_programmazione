@@ -1,4 +1,4 @@
-(**esercizio agggiunto pari pari a come lo ha svolto il professore
+(**ercizio agggiunto pari pari a come lo ha svolto il professore
     con la sola aggiunta di commenti per la spiegazione *)
                                                           
 let alkaline_earth_metals = ("beryllium", 4)::("magnesium", 12)::("calcium", 20)::("strontium", 38)::("barium", 56)::("radium", 88)::[] ;;

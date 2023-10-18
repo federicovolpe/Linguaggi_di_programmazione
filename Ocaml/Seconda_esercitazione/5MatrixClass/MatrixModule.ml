@@ -1,9 +1,12 @@
 (** interfaccia delle matrici con le funzioni richieste *)
-module type Matrix = sig                                 
-  type m = int list list                                 
+
+module type Matrix = sig                                  
+                                                          
+  type m = int list list                                  
+                                                          
   (* ritorna true se le due matrici sono uguali *)                             
-  val matrix_equivalence : m -> m -> bool                
-                                                      
+  val matrix_equivalence : m -> m -> bool                 
+                                                          
   (* date due matrici rende la seconda uguale alla prima *)                  
   val matrix_copy : m -> m -> m                                              
                                                                              
@@ -20,4 +23,6 @@ module type Matrix = sig
   val matrix_norm : m -> int                                                 
                                                                              
 end                                                                          
-;;                                                                           
+;;                                       
+  
+  

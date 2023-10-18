@@ -29,7 +29,7 @@ module Matrix = struct
         | h:: t -> costruttore t alpha (acc @ [h * alpha])                                                            
     in                                                                                                                
     costruttore v alpha []                                                           
-     
+                              
   (** funzione che moltiplica tutti gli elementi di una matrice per uno scalare alpha *)                                                                                     
   let scalar_matrix_multiplication m1 alpha =                                          
       let rec costruttore m1 alpha acc =                                                 
@@ -80,22 +80,22 @@ module Matrix = struct
                                                                                                                                                         
 end ;;                                                                                                  
                                                                                                         
-(* testing *)                                                                                           
-list_eq [1;2;3;4;5;6] [1;2;3;4;5;6] ;;                                                                  
-list_eq [1;2;3;4;5;6] [1;2;3;4;5] ;;                                                                    
-list_eq [1;2;3;4;5;6] [] ;;                                   
-                                                              
-matrix_copy [[1;2;3];[4;5;6];[7;8;9]] ;;                                          
-                                                                                                        
-scalar_vector_multiplication [1;2;3;4;5] 0 ;;                                                           
-scalar_vector_multiplication [1;2;3;4;5] 5 ;;                                                           
+(* TESTING... *)                                                                                           
+Matrix.list_eq [1;2;3;4;5;6] [1;2;3;4;5;6] ;;                                                                  
+Matrix.list_eq [1;2;3;4;5;6] [1;2;3;4;5] ;;                                                                    
+Matrix.list_eq [1;2;3;4;5;6] [] ;;                                                    
                                                                                
-scalar_matrix_multiplication [[1;2;3];[4;5;6];[7;8;9]] 0 ;;                    
-scalar_matrix_multiplication [[1;2;3];[4;5;6];[7;8;9]] 2 ;;   
-                                                              
-matrix_transposition [[1;2;3];[4;5;6];[7;8;9]] ;;             
-matrix_transposition [[0]] ;;                                 
-                                                              
-matrix_norm [[1;2;3];[4;5;6];[7;8;9]] ;;                      
-matrix_norm [[0]] ;;                                          
+Matrix.matrix_copy [[1;2;3];[4;5;6];[7;8;9]] ;;                                          
+                                                                                                        
+Matrix.scalar_vector_multiplication [1;2;3;4;5] 0 ;;                                                           
+Matrix.scalar_vector_multiplication [1;2;3;4;5] 5 ;;                                                           
+                                                                               
+Matrix.scalar_matrix_multiplication [[1;2;3];[4;5;6];[7;8;9]] 0 ;;                    
+Matrix.scalar_matrix_multiplication [[1;2;3];[4;5;6];[7;8;9]] 2 ;;                    
+                                                                               
+Matrix.matrix_transposition [[1;2;3];[4;5;6];[7;8;9]] ;;                              
+Matrix.matrix_transposition [[0]] ;;                                                  
+                                                                               
+Matrix.matrix_norm [[1;2;3];[4;5;6];[7;8;9]] ;;                                       
+Matrix.matrix_norm [[0]] ;;                                                           
                                                                                

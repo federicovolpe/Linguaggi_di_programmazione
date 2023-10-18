@@ -54,3 +54,12 @@ let print titoli =
 (* TESTING... *)                                                                                          
 let testi = ["Casablanca" ; "The Maltese Falcon" ; "The Big Sleep"] ;;                                    
 print testi ;;                                                                                      
+                             
+(* output:                   
+  #                          
+  3               The Big Sleep
+  1               Casablanca   
+  2               The Maltese Falcon
+  2               The Maltese Falcon
+  3               The Big Sleep
+   *)                        

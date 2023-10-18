@@ -1,40 +1,39 @@
 (*programma che restituisce il fattoriale di quello che gli viene passato*)
-
+                             
 let rec factorial (n: int): int =
-  if n <= 0 then 1
-  else n * factorial(n-1)
-;;
-
-let () =
+  if n <= 0 then 1           
+  else n * factorial(n-1)    
+;;                           
+                             
+let () =                     
   Printf.printf "%d\n" (factorial 4);
-  for n = 0 to 16 do
+  for n = 0 to 16 do         
     Printf.printf "%d! = %d\n" n (factorial n)
-  done;
- 
-
-(*funzione che ritorna l'ultimo elemento di una lista*)
-let rec last a = function
-  | [] -> None
-  | [ x ] -> Some x
-  | _ :: t -> last t
-;;
-
+  done;;                                                    
+                                                            
+                                                            
+(*funzione che ritorna l'ultimo elemento di una lista*)     
+let rec last = function                                     
+  | _ :: t -> last t                                        
+  | x -> x                                                  
+;;                                                          
+                                                            
 (*funzione che ritorna gli ultimi due elementi di una lista*)
-let rec last2 a =
-  match a with
-  | [] -> None
-  | [ x ] -> None
-  | [ x ; y] -> Some(x,y)
-  | _ :: t -> last t
-;;
-
-(*funzione che ritorna l'ennesimo elemento di una lista*)
-let rec nth a i =
+let rec last2 a =                                           
+  match a with                                              
+  | [] -> None                                              
+  | [ x ] -> None                                           
+  | [ x ; y] -> Some(x,y)                                   
+  | _ :: t -> last t                                        
+;;                                                          
+                                                            
+(*funzione che ritorna l'ennesimo elemento di una lista*)   
+let rec nth a i =                                           
   match a with
   | [] -> None
   | h::t -> if i = 0 then Some h else nth t (i-1)
-;;
-
+;;       
+         
 (*funzione che ritorna la lunghezza di una lista*)
 let length a = 
   let rec ausiliaria n = function

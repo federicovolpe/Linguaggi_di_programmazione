@@ -84,7 +84,7 @@ end ;;
 Matrix.list_eq [1;2;3;4;5;6] [1;2;3;4;5;6] ;;                                                                  
 Matrix.list_eq [1;2;3;4;5;6] [1;2;3;4;5] ;;                                                                    
 Matrix.list_eq [1;2;3;4;5;6] [] ;;                                                    
-                                                                               
+                                                                     
 Matrix.matrix_copy [[1;2;3];[4;5;6];[7;8;9]] ;;                                          
                                                                                                         
 Matrix.scalar_vector_multiplication [1;2;3;4;5] 0 ;;                                                           

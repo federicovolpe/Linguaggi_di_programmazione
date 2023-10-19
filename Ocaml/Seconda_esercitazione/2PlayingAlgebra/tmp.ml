@@ -16,26 +16,26 @@ module Monoid (S : ALGEBRAIC_SORT) = struct
     associativity S.to_string S.to_string S.to_string && identity_element S.to_string
 end                                                                                  
                                                                                      
-(*module Group (S : ALGEBRAIC_SORT) = struct                                           
-  let check_group add i =                                                            
-    (* Check associativity *)                                                        
-    let associativity a b c = add a (add b c) = add (add a b) c in                   
-                                                                                     
-    (* Check identity element *)                                                     
-    let identity_element a = (add a i = a) && (add i a = a) in                       
-                                                                                     
-    (* Check invertibility *)
+(*module Group (S : ALGEBRAIC_SORT) = struct                                                           
+  let check_group add i =                                                                              
+    (* Check associativity *)                                                                          
+    let associativity a b c = add a (add b c) = add (add a b) c in                                     
+                                                                                                       
+    (* Check identity element *)                                                                       
+    let identity_element a = (add a i = a) && (add i a = a) in                                         
+                                                                                                       
+    (* Check invertibility *)                                                                          
     let invertibility a = (add a (add (S.to_string a) (i a)) = i a) && (add (S.to_string a) a = i a) in
-  
-    (* Return true if it's a group, false otherwise *)
+                                                                                                       
+    (* Return true if it's a group, false otherwise *)                                                 
     associativity S.to_string S.to_string S.to_string && identity_element S.to_string && invertibility S.to_string
-end
-
-module Ring (S : ALGEBRAIC_SORT) = struct
-  let check_ring add mul i =
-    (* Check addition is an abelian (commutative) group *)
-    let is_abelian_group = Group(S).check_group add i in
-  
+end                                                                                                    
+                                                                                                       
+module Ring (S : ALGEBRAIC_SORT) = struct                                                              
+  let check_ring add mul i =                                                                           
+    (* Check addition is an abelian (commutative) group *)                                             
+    let is_abelian_group = Group(S).check_group add i in                                               
+                                                                                                       
     (* Check multiplication distributes over addition *)
     let distributivity a b c = mul a (add b c) = add (mul a b) (mul a c) && mul (add b c) a = add (mul b a) (mul c a) in
                                     

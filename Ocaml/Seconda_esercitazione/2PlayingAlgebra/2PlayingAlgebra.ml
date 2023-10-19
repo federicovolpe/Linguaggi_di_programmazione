@@ -1,7 +1,7 @@
-(** equivalente della classe astratta di java per una struttura albebrica che definisce:            
-    t     : tipo degli elementi trattati dalla struttura algebrica                                  
-    elems : lista degli elementi della struttura algebrica                                          
-    op    : operazione definita per il monoide allo stato attuale della risoluzione dell'esercizio                   
+(** equivalente della classe astratta di java per una struttura albebrica che definisce:                             
+    t     : tipo degli elementi trattati dalla struttura algebrica                                                   
+    elems : lista degli elementi della struttura algebrica                                                           
+    op    : operazione definita per la struttura algebrica                                      
     identity: elemento identita' utilizzato dalla struttura                                                          
     *)                                                                                                               
 module type AlgebraicStructure = sig                                                                                 
@@ -10,8 +10,6 @@ module type AlgebraicStructure = sig
   val op : t -> t -> t                                                                                               
   val identity : t                                                                                                     
 end                                                                                                                  
-                                                                                                                     
-(** un modulo per ogni struttura algebrica come da consegna *)                                                       
                                                                                                                      
 (* modulo per i monoidi, implementato utilizzando un functor                                                         
   di fatti prende una struttura algebrica come argomento.                                                            
@@ -156,12 +154,16 @@ let () =
 (* modulo per gli anelli, implementato utilizzando un functor                                                           
   di fatti prende una struttura algebrica come argomento.                                                             
   devono rispettare le proprieta':                                                                                    
-  - associativita'                                                                                                    
-  - identita'                                                                                                         
-  - invertibilita'                                                                                                       
+  - chiusura su tutte e due le operazioni                                                                                                    
+  - associativita' delle due operazioni                                                                                                         
+  - commutativita' della prima operazione                                                
+  - esistenza dell'elemento identita' della prima operazione                             
+  - esistenza dell'inverso della prima operazione                                        
+  - proprieta' distributiva                                                              
+  - esistenza dell'elemento identita' per la seconda operazione                                                                                                      
   *)                                                                                                   
-                                                                    
-  (* ridefinizione di struttura algebrica per poter ospitare la seconda operazione prevista dagli anelli *)                                                       
+                                                                                         
+(* ridefinizione di struttura algebrica per poter ospitare la seconda operazione prevista dagli anelli *)                                                       
 module type AlgebraicStructure = sig                                                                   
   type t                                                                                               
   val elems : t list                                                                                   
@@ -170,8 +172,8 @@ module type AlgebraicStructure = sig
   val identity : t                                                                                                     
 end                                                                                                    
                                                                                                        
-module Ring (Struct : AlgebraicStructure) = struct                  
-  let check_commutativity =                                          
+module Ring (Struct : AlgebraicStructure) = struct                                       
+  let check_commutativity =                                                              
     List.for_all (fun x ->                                           
                     List.for_all (fun y ->                           
                                     (Struct.op x y) = (Struct.op y x)

@@ -357,17 +357,17 @@ let fattori (n : int): int list =
 in
 
 let rec divisore (n : int) (lista : int list) : int =
-  match lista with
-  |[] -> n
+  match lista with                           
+  |[] -> n                                   
   | h :: t ->if n mod h = 0 then h else divisore n t
-in
-  let rec confronta (n : int) : int list = 
-    if n = 1 then [] 
+in                                           
+  let rec confronta (n : int) : int list =   
+    if n = 1 then []                         
     else divisore n primlista :: confronta (n / (divisore n primlista)) 
-;;
-
+;;                                           
+                                             
 (*funzione che prese due liste rende la seconda una copia della prima*)
-let copia x y = 
-match x with
-| [] -> y
-| h :: t -> List.nth 
+let copia x y =                              
+match x with                                 
+| [] -> y                                    
+| h :: t -> List.nth                         

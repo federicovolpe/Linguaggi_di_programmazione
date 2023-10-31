@@ -1,4 +1,4 @@
--module(es1).                                                                                                                                                                   
+-module(sequential).                                                                                                                                                                   
 -export([start/0,factors/1,is_prime/1]).                                                                                                                                                             
                                                                                                                                                                                                                                                                                                                            
 start() ->                                                                                                                                                                                                                                                                                                                 
@@ -7,7 +7,7 @@ start() ->
     InputTestPalindrome = ["Do geese see God?", "Rise to vote, sir.", "not a palindrome string"],                                                                                                                                                                                                                                    
     lists:map (fun (Stringa) ->                                                                                                                                                                                                                                                                                            
                     io:format("~p -> ~p ~n", [Stringa, is_palindrome(Stringa)]) end,                                                                                                                                                                                                                                       
-                    InputTestPalindrome),    
+                    InputTestPalindrome),                                                         
                                                                                                                                                                                                                                                                                                         
     io:format("------------------------------ is_an_anagram -------------------------------~n"),                                                                                                                                                                                                                           
     Dictionary = ["albero", "cane", "gatto", "casa", "sole", "mare", "montagna",                  
@@ -18,8 +18,8 @@ start() ->
     InputTestAnagram = ["cane","poto","ttoga","ociredef"],                                                                                                                                                                                                                                                                        
     lists:map (fun (Stringa) ->                                                                                                                                                                                                                                                                                            
                     io:format("~p -> ~p ~n", [Stringa, is_an_anagram(Stringa, Dictionary)]) end,                                                                                                                                                                                                                                       
-                    InputTestAnagram),                  
-                                                        
+                    InputTestAnagram),                                                            
+                                                                                                  
     io:format("--------------------------------- is_prime ----------------------------------~n"),    
     InputTestNumbers = [1,2,3,4,5,6,7,8,9,1000,113,137,999],                                          
     lists:map (fun (Numero) ->                                                                                                                                                                                                                                                                                            

@@ -1,3 +1,4 @@
-*.beam     
-*.class    
-*.DS_Store 
+*.beam        
+*.class       
+*.DS_Store    
+*.pingPong.erl

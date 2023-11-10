@@ -1,4 +1,5 @@
-*.beam                                
-*.class                               
-*.DS_Store                            
-./Erlang/Prima_esercitazione/4PingPong                                      
+*.beam                                  
+*.class                                 
+*.DS_Store                              
+./Erlang/Prima_esercitazione/4PingPong  
+                                    

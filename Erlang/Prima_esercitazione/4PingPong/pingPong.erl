@@ -1,6 +1,8 @@
+% NON L'ESERCIZIO PREVISTO DALLA TRACCIA
 -module (pingPong).                                                 
 -export ([start/1,ping/0, pong/0]).                                 
-                                                                    
+                                        
+                                                                
 start(Ngiri) -> % creazione e registrazione dei processi ping e pong
     register(ping, spawn(?MODULE, ping, [])),                       
     register(pong, spawn(?MODULE, pong, [])),                       

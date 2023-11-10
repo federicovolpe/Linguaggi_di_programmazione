@@ -6,12 +6,12 @@
                                                                                                         
 start() ->                                                                                              
     register(process1, spawn(?MODULE, loop, [])), % inizializzo il primo processo    
-    io:format("creato il processo ~p ~n", [process1]),             
+    io:format("creato il processo ~p ~n", [process1]),                              
     ok.                                                                             
                                                                                                         
 stop() ->                                                                                               
     process1 ! stop.                                                                                     
-                                                                                
+                                                                                    
                                                                                                     
 print(Message) ->                                                                                       
     process1 ! {msg, Message}.                                                                                  

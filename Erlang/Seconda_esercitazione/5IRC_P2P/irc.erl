@@ -1,3 +1,4 @@
+% esercizio solo inizializzato, non terminato
 - module(chat_group).                                                
 - export([start/2]).                                       
                                                            

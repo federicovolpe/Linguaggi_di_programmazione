@@ -1,5 +1,5 @@
-- module (listComp).                                                                    
-- export ([main/0]).                                                                    
+- module (listComp).                                                                                        
+- export ([main/0]).                                                                                        
                                                                                                                    
 main() ->                                                                                                          
     Tests = [[1, 2, 12, "34", "ciso", 0, telegrafo],                                                              

@@ -40,3 +40,9 @@ group_controller(L) ->
             io:format("group controller received Msg=~p~n", [Any]), % il group controller stampa il messaggio ricevuto
             group_controller(L)                                     % ciclo
     end.                                    
+
+% consegna scritta chiara:
+% fare in modo di decentralizzare il sistema
+% tutti i processi conoscono tutti i processi nella rete
+% un messaggio di di join o unjoin di un processo viene inviato prima ad un processo che poi lo propaga
+% a tutti gli altri processi

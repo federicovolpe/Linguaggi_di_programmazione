@@ -4,8 +4,8 @@
 start() ->                                                                                                
     register(process1, spawn(?MODULE, loopPadre, [])),                                                    
     register(process2, spawn(?MODULE, setupFiglio, [])),                                                         
-    io:format("inizializzati i processi ~n"). 
-                     
+    io:format("inizializzati i processi ~n").                             
+                                                                          
 stop() ->                                                                                                 
     process1 ! stop.                                                                                     
                                                                                                                        

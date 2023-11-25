@@ -1,25 +1,31 @@
--module(server).
--export([create/0]).
-
-create() ->
-    io:format("Creazione avvenuta del server [~p]~n",[self()]),
-    loop().
-
-loop() ->
-    io:format("processo [~p] pronto per ricevere ~n",[self()]),
-    receive
-        {Mittente1 ,S1} -> 
-            io:format("il server ha ricevuto la prima stringa ~p~n",[S]);
-            receive
-                {Mittente2, S2} ->
-                    if(uguale(S1, S2)) -> io:format("le stringhe sono identiche~n");
-                        true -> io:format("le stringhe NON sono identiche~n")
-                    end end
-        {stop} -> 
-            io:format("sto stoppando il server [~p]~n",[self()]),
-            exit(normal)
-    end,
-loop().
-
-uguale(A,A) -> true;
-uguale(A,B) -> false.
+-module(server).                                                                     
+-export([start/1]).                                                                  
+                                                                                     
+start(Client) ->                                                                     
+    io:format("processo server veramente avvenuta~n"),                                                                   
+    process_flag(trap_exit, true),                                                                         
+    link(Client),                                                                                         
+    register(mm1, spawn(mm, create, [1, self()])),                                                                 
+    register(mm2, spawn(mm, create, [2, self()])),                                                                 
+    loop().                                                                                               
+                                                                                                          
+loop() ->                                                                                                 
+    receive                                                                                               
+        {'EXIT', Pid , Reason} ->                                                                         
+            io:format("il server termina perche' il client e' stato terminato [~p di ~p]~n",[Reason, Pid]),  
+            exit(kill);                                                                                   
+                                                                                                          
+        {Mittente, Quesito} ->                                                                    
+            io:format("il server ha ricevuto il quesito ~p dal client ~p~n", [Quesito, Mittente]),                                                                        
+            is_palindrome(Quesito, Mittente)                                                               
+    end,                                                                                                                   
+    loop().                                                                                                                
+                                                                                                                           
+is_palindrome(S, Destinatario) ->                                                                                          
+    %spezza l'input in due parti uguali                                                                                    
+    Half = string:len(S) div 2,                                                                                            
+    Prima = string:sub_string(S, 1, Half),                                                                                 
+    Seconda = string:sub_string(S, Half +1, string:len(S)),                                                                   
+    mm1 ! {string:reverse(Prima), Destinatario}, % invio la prima metà al primo middleman                                          
+    mm2 ! {string:reverse(Seconda), Destinatario}. % invio la seconda metà al secnondo middleman ma in modo reverse                                                                                                                 
+                                                                                                                                                     

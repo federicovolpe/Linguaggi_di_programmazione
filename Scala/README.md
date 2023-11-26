@@ -33,7 +33,7 @@ Part 1
 Part 2                                                                                                                                             
 * [Exercise 1 DLS](Seconda_esercitazione/esercizio1/README.md)                                                                                      
 * [Exercise 2 DLS Without Grammar](Seconda_esercitazioneesercizio2/README.md)                                                                      
-* [Exercise 3 Arithmetic Evaluator](Seconda_esercitazione/3arithmetic_evaluator/README.md)                                                         
+* [Exercise 3 Arithmetic Evaluator](Seconda_esercitazione/3arithmetic_evaluator)                                                         
 * [Exercise 4 BrainFuck](esercizio2/README.md)                                                                                                     
 Additional exercises                                                                                                                               
 * [Repo](esercizio2/README.md)                                                                                                                     

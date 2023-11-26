@@ -1,30 +1,26 @@
-# Scala Exercises for the Programming Languages Course                                                                     
-                                                                                                                           
-This repo contains all the Scala exercises assigned in the Programming Languages course at Università degli studi di Milano.
-                                                                                                                           
-**Objective**                                                                                                              
-                                                                                                                                           
-The objective of these exercises is to consolidate the knowledge acquired during the course.                                               
-                                                                                                                                           
-**Difficulty level**                                                                                                                       
-                                                                                                                                           
-The exercises are of intermediate level.                                                                                                   
-                                                                                                                                           
-**Requirements**                                                                                                                           
-                                                                                                                                           
-To complete the exercises, you need to have a good understanding of the Scala language, and in general of OO languages.                    
-                                                                                                                                            
-**Main features**                                                                                                                            
-                                                                                                                                              
-* Exercises for understanding the fundamental concepts of the Scala language                                                                  
-* Exercises for practicing functional programming                                                                                             
-* Exercises for creating a Basic DSL                                                                                                          
-                                                                                                                                              
-**Index**                                                                                                                                     
-Part 1                                                                                                                                        
-* [Exercise 1 Functional Scala](Prima_esercitazione/1Functional_scala)                                                                     
+# Scala Exercises for the Programming Languages Course                                                                                                                   
+                                                                                                                                                                         
+This repo contains all the Scala exercises assigned in the Programming Languages course at Università degli studi di Milano.                                             
+                                                                                                                                                                         
+**Objective**                                                                                                                                                            
+                                                                                                                                                                         
+The objective of these exercises is to consolidate the knowledge acquired during the course.                                                                             
+                                                                                                                                                                         
+**Difficulty level intermediate**                                                                                                
+                                                                                                                                                                         
+The exercises are of intermediate level.                                                                                                                                 
+To complete the exercises, you need to have a good understanding of the Scala language, and in general of OO lang                                                                                                                                                              
+**Main features**                                                                                                                                                        
+                                                                                                                                                                         
+* Exercises for understanding the fundamental concepts of the Scala language                                                                                             
+* Exercises for practicing functional programming                                                                                                                        
+* Exercises for creating a Basic DSL                  
+                                                                                                                                                                         
+**Index**                                                                                                                                                                
+Part 1                                                                                                                                              
+* [Exercise 1 Functional Scala](Prima_esercitazione/1Functional_scala)                                                                      
 * [Exercise 2 List Comprehension](Prima_esercitazione/2list_comprehension)                                                                        
-* [Exercise 3 Distributed Reverse](Prima_esercitazione/3distributed_reverse)                                                           
+* [Exercise 3 Distributed Reverse](Prima_esercitazione/3distributed_reverse)                                                                
 * [Exercise 4 Playing with Algebra](Prima_esercitazione/4playing_with_algebra)                                                                                                   
 * [Exercise 5 Playing with Files](Prima_esercitazione/5playing_with_files)                                                                                                       
 * [Exercise 6 Few more math](Prima_esercitazione/6few_more_math)                                                                                                                 
